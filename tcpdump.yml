@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   tasks:
+   - name: ensure tcpdump is at latest version.
+     yum: name=tcpdump state=present
+
+   - name: ensure tcpdump is started.
+     service: name=tcpdump state=started enabled=yes
