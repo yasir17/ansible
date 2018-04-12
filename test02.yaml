@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: do a uname
+      shell: uname -a > /home/ymasood/result.txt
+
+    - name: whats my ip address
+      shell: ifconfig >> /home/ymasood/result.txt
+
+    - name: disk space
+      shell: df -h >> /home/ymasood/result.txt
