@@ -1,0 +1,12 @@
+---
+- hosts: all
+  vars:
+   - var_thing: "never gonna"
+
+  tasks:
+   - name: echo stuff
+     command: echo -e "{{ var_thing }} give you up,\n{{ var_thing }} let you down,\n{{ var_thing }} run around and dessert you"
+     register: results
+   - name: show results
+     debug: msg={{ results }}
+
