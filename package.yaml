@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  
+  tasks: 
+   - name: install package
+     yum: name={{ item }} state=latest
+     with_items:
+      - clamav
+      - epel-release
+     
