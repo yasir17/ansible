@@ -6,5 +6,6 @@
     - name: install packages
       yum: name={{ item }} state=latest
       with_items:
-       - strace
-       - wget
+       - epel-release
+       - update
+       - lynis
